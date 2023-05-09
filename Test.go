@@ -42,7 +42,7 @@ func makeNumber(rawNumber string) (int, bool) {
 		number += romeNumbers[string(rawNumber[len(rawNumber)-1])]
 	}
 
-	if number < 0 || number > 10 {
+	if number < 1 || number > 10 {
 		fmt.Fprintf(os.Stderr, "Number should be from 1 to 10 inclusively!\n")
 		os.Exit(1)
 	}

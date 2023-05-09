@@ -30,13 +30,13 @@ func makeNumber(rawNumber string) (int, bool) {
 					number += int(val)
 				}
 			} else {
-				fmt.Fprintf(os.Stderr, "Something in your equation is not a number!\n")
+				fmt.Fprintf(os.Stderr, "Something in your equation is not a int number!\n")
 				os.Exit(1)
 			}
 		}
 		_, ok := romeNumbers[string(rawNumber[len(rawNumber)-1])]
 		if !ok {
-			fmt.Fprintf(os.Stderr, "Something in your equation is not a number!\n")
+			fmt.Fprintf(os.Stderr, "Something in your equation is not a int number!\n")
 			os.Exit(1)
 		}
 		number += romeNumbers[string(rawNumber[len(rawNumber)-1])]
@@ -99,7 +99,7 @@ func sub(x int, y int) int {
 
 // subtraction of Roman numbers
 func subRoman(x int, y int) string {
-	if x - y < 1 {
+	if x-y < 1 {
 		fmt.Fprintf(os.Stderr, "Subtraction of Roman numbers cannot be 0 or lower!\n")
 		os.Exit(1)
 	}
